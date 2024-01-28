@@ -1,0 +1,239 @@
+.navbar {
+  height: 56px;
+  padding: 10px 20px;
+  background-color: #9395d3;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .mobileActive {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #9395d3;
+    height: calc(100vh - 60vh);
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    @media (max-width: 426px) {
+      display: none;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      &:active {
+        background-color: transparent !important;
+        border-bottom: 2px solid #7a48b0;
+        color: #7a48b0;
+      }
+    }
+  }
+  .menu {
+    display: none;
+    @media (max-width: 426px) {
+      display: block;
+    }
+  }
+}
+.hero-section {
+  display: flex;
+  background-color: #d6d7ef;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 474px;
+  text-align: center;
+  .hero-headings {
+    h1 {
+      color: white;
+      margin-top: 0px;
+    }
+    p {
+      color: #9396e3;
+      strong {
+        font-weight: bold;
+        color: rgb(147 123 241);
+      }
+    }
+  }
+  @media (max-width: 426px) {
+    flex-direction: column;
+  }
+}
+.not-found-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  h1 {
+    font-size: 90px;
+  }
+}
+.task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  height: 60vh;
+  @media (max-width: 426px) {
+    justify-content: space-evenly;
+  }
+  h1 {
+    align-self: flex-start;
+    margin-left: 10%;
+    font-size: 40px;
+    color: #8183c9;
+    flex-grow: 1;
+    @media (max-width: 426px) {
+      margin: auto;
+    }
+  }
+  .input-data {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      color: red;
+      align-self: flex-start;
+      margin-left: 15%;
+    }
+    input {
+      display: block;
+      width: 70%;
+      border-radius: 20px;
+      border: 3px solid #8183c9;
+      font-size: 30px;
+      padding: 20px;
+
+      height: 70%;
+      color: #300f9c;
+      &:active,
+      &:focus {
+        border: 3px solid #4c50c8 !important;
+        outline: none;
+      }
+      &::placeholder {
+        color: #9eaae2;
+      }
+    }
+  }
+  button {
+    margin-top: 5%;
+    border: 1px solid #8183c9 !important;
+    border-radius: 10px;
+    color: #8183c9;
+    background-color: white;
+    padding: 20px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+
+    &:focus,
+    &:active {
+      color: #300f9c;
+    }
+    &:hover {
+      background-color: #8183c9;
+      color: white;
+    }
+  }
+}
+
+//listing
+
+.listing {
+  overflow-y: auto;
+  h1 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 40px;
+    @media (max-width: 426px) {
+      align-items: center;
+    }
+    .loading-text {
+      color: #9eaae2;
+    }
+    .task {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      height: 70px;
+      margin-top: 20px;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #9eaae2;
+      font-size: 15px;
+      border: 2px solid #8183c9 !important;
+      .task-start-container {
+        display: flex;
+        justify-content: flex-start;
+
+        align-items: center;
+        label {
+          margin-top: -3%;
+        }
+      }
+      .task-end-container {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+        align-items: center;
+        @media (max-width: 426px) {
+          width: 40%;
+        }
+        button {
+          border: 1px solid #8183c9 !important;
+          border-radius: 10px;
+          color: #8183c9;
+          background-color: white;
+          padding: 5% 10%;
+          cursor: pointer;
+          margin-left: 5px;
+          font-size: 16px;
+          text-align: center;
+          &:focus,
+          &:active {
+            color: #300f9c;
+          }
+          &:hover {
+            background-color: #8183c9;
+            color: white;
+          }
+          @media (max-width: 426px) {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.strikethrough-text {
+  text-decoration: line-through;
+}
